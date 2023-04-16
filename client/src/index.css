@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: rgb(34,193,195);
+}
+
+.container {
+  position : absolute;
+  height : 100vh;
+  width: 100vw;
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.containerBorder{
+  border : 2px solid #0000ff;
+  border-radius : 10px 10px 10px 10px;
+  -moz-border-radius : 10px 10px 10px 10px;
+  -webkit-border-radius : 10px 10px 10px 10px;
+  -webkit-box-shadow : 0 0 25px 0 rgba(255, 200, 0, 0.75);
+  -moz-box-shadow : 0 0 25px 0 rgba(255, 200, 0, 0.75);
+  box-shadow : 0 0 25px 0 rgba(255, 200, 0, 0.75);
+}
+
+h1{
+  font-size: 2rem;
+  margin-block: 1rem;
+}
+.textCenter{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Game  */
+.game{
+  height: 90%;
+  width: 98%;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  position: relative;
+}
+
+.playerBoard {
+  grid-column : 1 / 2;
+  position: relative;
+  overflow: scroll;
+}
+
+.controlArea {
+  height : 240px;
+  margin : 10px;
+  padding : 10px;
+  grid-column : 2 / 3;
+  border : 1px solid #000000;
+  /* Round corners. */
+  border-radius : 10px 10px 10px 10px;
+  -moz-border-radius : 10px 10px 10px 10px;
+  -webkit-border-radius : 10px 10px 10px 10px;
+}
+
+
+.highlightTile {
+  -webkit-filter : drop-shadow(0px 0px 50px #ff0000) contrast(150%) saturate(200%);
+  filter : drop-shadow(0px 0px 10px #ff0000) contrast(150%) saturate(200%);
+}
+
+/* Login  */
+.login{
+ width: 250px;
+ height: 250px;
+ display: flex;
+ justify-content: space-around;
+ flex-direction: column;
+}
+
+.inputContainer{
+  display: flex;
+  margin-left: 8px;
+  margin-right: 16px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgb(235, 221, 101);
+}
+
+input{
+  padding-block: 4px;
+  height: 24px;
+
+  border: none;
+  width: 100%;
+  background-color: transparent;
+}
+input:focus {
+  outline: none; /* remove the default outline */
+  border-bottom: 2px solid blue; /* add a bottom border */
+}
+.inputContainer:focus-within {
+  border-bottom: none;
+}
+.loginControlls{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-bottom: 16px;
+}
+button{
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.loginButton{
+  display: flex;
+  width: 64px;
+  height: 32px;
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  border-radius: 10px;
+  border:none;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Home */
+.home {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  height: 90%;
+  width: 98%;
+  
+}
+
+.square {
+  border-radius: 5px;
+  visibility: hidden;
+}
+
+.visible{
+  display: flex;
+  visibility: visible;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 2px solid blue;
+  cursor: pointer;
+}
+
+.selected{
+  border: 2px solid yellow;
+}
+
