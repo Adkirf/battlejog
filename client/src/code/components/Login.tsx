@@ -37,7 +37,7 @@ function Login() {
       if(credentials.password===credentials.repeat_password){
         const {username, password} = credentials;
         try{
-          const res = await fetch("https://battlejog-production.up.railway.app/api/signin",{
+          const res = await fetch("https://battlejog.up.railway.app/api/signin",{
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"
@@ -71,7 +71,7 @@ function Login() {
       const {username, password} = credentials;
     
       try{
-        const res = await fetch("https://battlejog-production.up.railway.app/api/login",{
+        const res = await fetch("https://battlejog.up.railway.app/api/login",{
           method: "PUT",
           headers: {
             "Content-Type": "application/json"
