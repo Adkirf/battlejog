@@ -4,7 +4,7 @@ import React from "react";
 export function createSocketComm(inParentComponent: React.Component, username:string) {
 
 
-  const connection: WebSocket = new WebSocket("ws://localhost:8080");
+  const connection: WebSocket = new WebSocket("ws://battlejog-production.up.railway.app:8080");
 
   connection.onopen = () => {
     console.log("Connection opened to server");
